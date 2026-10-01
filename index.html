@@ -3,240 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kim — Fotografi · Åland</title>
-  <meta name="description" content="Kim — fotograf på Åland. Bröllop, familj, porträtt och kommersiella uppdrag.">
+  <title>Kim Lindström Photography — under construction</title>
+  <meta name="description" content="Kim Lindström Photography på Åland. Sida under uppbyggnad. Kontakt: hello@kim.ax">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%231a1a1a'/%3E%3Ctext x='16' y='21' font-size='16' text-anchor='middle' fill='%23fff' font-family='serif'%3EK%3C/text%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@300;400&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --ink: #141414;
-      --paper: #faf9f7;
-      --muted: #6b6b6b;
-      --accent: #b08d57;
-      --line: #e6e2dc;
-    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html, body { height: 100%; }
     body {
       font-family: Inter, sans-serif;
-      background: var(--paper);
-      color: var(--ink);
-      line-height: 1.65;
+      background: #141414; color: #faf9f7;
+      display: grid; place-items: center;
+      text-align: center; line-height: 1.6;
+      padding: 2rem;
       -webkit-font-smoothing: antialiased;
     }
-
-    /* ---- Navigation ---- */
-    header {
-      position: sticky; top: 0; z-index: 50;
-      background: var(--paper);
-      border-bottom: 1px solid var(--line);
-      padding: 1.4rem 5vw;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .brand { font-family: "Playfair Display", Georgia, serif; font-size: 1.35rem; letter-spacing: .02em; text-decoration: none; color: var(--ink); }
-    nav ul { display: flex; gap: clamp(1.2rem, 3vw, 3rem); list-style: none; }
-    nav a { text-decoration: none; color: var(--ink); font-size: .95rem; font-weight: 400; }
-    nav a:hover { color: var(--accent); }
-
-    /* ---- Layout helpers ---- */
-    .container { max-width: 68rem; margin: 0 auto; padding: 0 5vw; }
-    section { padding: clamp(5rem, 12vw, 10rem) 0; }
-
-    /* ---- Hero ---- */
-    .hero {
-      min-height: 82vh;
-      display: grid; place-items: center; text-align: center;
-      padding: 4rem 5vw;
-    }
-    .hero .kicker { text-transform: uppercase; letter-spacing: .35em; font-size: .8rem; color: var(--muted); }
-    .hero h1 {
+    .wrap { max-width: 34rem; }
+    .serif { font-family: "Playfair Display", Georgia, serif; }
+    .kicker { text-transform: uppercase; letter-spacing: .4em; font-size: .75rem; color: #8a8a8a; }
+    h1 {
       font-family: "Playfair Display", Georgia, serif;
-      font-weight: 400; font-size: clamp(2.6rem, 7vw, 5.5rem);
-      line-height: 1.08; margin: 1.2rem 0 0;
+      font-weight: 400; font-size: clamp(1.9rem, 5vw, 3rem);
+      margin: 1.4rem 0 1rem; line-height: 1.15;
     }
-    .hero h1 em { font-style: italic; color: var(--accent); }
-    .hero p { max-width: 34rem; color: var(--muted); font-size: clamp(1rem, 1.4vw, 1.2rem); margin-top: 1.6rem; }
-    .cta-row { margin-top: 2.2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn {
-      display: inline-block; padding: .95rem 2.1rem; border: 1px solid var(--ink);
-      background: transparent; color: var(--ink); text-decoration: none;
-      font-family: Inter, sans-serif; font-size: .95rem; letter-spacing: .02em; cursor: pointer;
-      transition: background .2s, color .2s;
+    h1 em { font-style: italic; color: #b08d57; }
+    p { color: #a9a9a9; font-size: 1.05rem; }
+    .bar {
+      width: 220px; height: 1px; background: #333; margin: 2.2rem auto;
+      position: relative; overflow: hidden;
     }
-    .btn:hover { background: var(--ink); color: var(--paper); }
-    .btn-primary { background: var(--ink); color: var(--paper); }
-    .btn-primary:hover { background: transparent; color: var(--ink); }
-
-    /* ---- Portfolio ---- */
-    .sec-head { display: flex; align-items: baseline; gap: 1.5rem; }
-    .sec-head h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 400; font-size: clamp(1.8rem, 3.4vw, 2.8rem); }
-    .sec-head .sub { color: var(--muted); }
-    .grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.8rem; margin-top: 3rem;
+    .bar::after {
+      content: ""; position: absolute; inset: 0;
+      background: #b08d57; animation: slide 2.2s ease-in-out infinite;
     }
-    .card {
-      position: relative; aspect-ratio: 4 / 5; overflow: hidden;
-      background: var(--line); border: 1px solid var(--line);
-    }
-    .card img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
-    .card:hover img { transform: scale(1.04); }
-    .card .cap {
-      position: absolute; inset: auto 0 0 0; padding: 1rem 1.2rem;
-      background: rgba(20,20,20,.78); color: #fff;
-      font-size: .82rem; letter-spacing: .04em;
-    }
-    .card a { position: absolute; inset: 0; display: block; text-decoration: none; }
-    /* Placeholder images (solid tint until Kim's own photos are added) */
-    .ph { width: 100%; height: 100%; display: grid; place-items: center; }
-    .ph::before { content: attr(data-cap); color: var(--muted); font-family: "Playfair Display", Georgia, serif; font-style: italic; font-size: 1.05rem; }
-
-    /* ---- Gallery CTA ---- */
-    .gallery-cta {
-      background: var(--ink); color: var(--paper);
-      padding: min(8vh, 7rem) 5vw; text-align: center;
-    }
-    .gallery-cta h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 400; font-size: clamp(1.8rem, 4vw, 3rem); }
-    .gallery-cta p { color: rgba(255,255,255,.75); margin-top: 1.2rem; max-width: 34rem; }
-    .gallery-cta .btn { border-color: var(--paper); color: var(--paper); }
-    .gallery-cta .btn:hover { background: var(--paper); color: var(--ink); }
-
-    /* ---- About ---- */
-    .about { display: grid; grid-template-columns: 1.1fr .9fr; gap: 3.5rem; align-items: center; }
-    .about .ph { aspect-ratio: 3/4; width: 100%; border: 1px solid var(--line); }
-    .about h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 400; font-size: clamp(1.8rem, 3.4vw, 2.8rem); }
-    .about p { color: var(--ink); margin-top: 1.5rem; }
-    .about p + p { margin-top: 1.1rem; }
-
-    /* ---- Contact ---- */
-    .contact h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 400; font-size: clamp(1.8rem, 3.4vw, 2.8rem); margin-bottom: 1rem; }
-    .contact .mail { font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 400; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: .3rem; }
-    .contact .mail:hover { color: var(--accent); }
-    .contact .meta { margin-top: 2rem; color: var(--muted); }
-    .contact .meta div { margin-top: .4rem; }
-    .contact .meta a { color: var(--accent); }
-
-    footer { border-top: 1px solid var(--line); padding: 3rem 5vw; text-align: center; color: var(--muted); font-size: .85rem; }
-    footer .brand-sm { font-family: "Playfair Display", Georgia, serif; font-size: 1.2rem; color: var(--ink); }
-    footer nav { margin-top: 1.2rem; }
-    footer nav a { color: var(--muted); margin-left: .4rem; }
-
-    @media (max-width: 720px) {
-      nav ul { gap: 1rem; }
-      .about { grid-template-columns: 1fr; }
-      .card .cap { font-size: .75rem; }
-    }
+    @keyframes slide { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+    a { color: #d9cfc4; text-decoration: none; border-bottom: 1px solid #444; padding-bottom: .1rem; }
+    a:hover { color: #fff; border-color: #b08d57; }
+    .footer { margin-top: 2.4rem; font-size: .85rem; color: #6c6c6c; }
   </style>
 </head>
 <body>
-
-<header>
-  <a class="brand" href="#top">Kim</a>
-  <nav>
-    <ul>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="https://gallery.kim.ax/">Galleri</a></li>
-      <li><a href="#om">Om</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main id="top">
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div>
-      <div class="kicker">Fotograf · Åland</div>
-      <h1>Ljuset, ögonblicket,<br><em>minnet.</em></h1>
-      <p>Jag fotograferar det som händer när ingen försöker – bröllop, familjer, människor och de platser som rymmer dem.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://gallery.kim.ax/">Se mina gallerier</a>
-        <a class="btn" href="#kontakt">Boka mig</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PORTFOLIO ============ -->
-  <section id="portfolio" class="container">
-    <div class="sec-head">
-      <h2>Utvalda arbeten</h2>
-      <span class="sub">Ett urval av pågående och avslutade uppdrag</span>
-    </div>
-    <div class="grid">
-      <!-- Ersätt varje ruta: ta bort class="ph" och lägg ett riktigt foto i <img>.
-           Exempel:
-             .card > img[src="bröllop.jpg", alt="..."]
-           Lämna .cap-texten kvar. -->
-      <div class="card">
-        <div class="ph" data-cap="Bröllop"></div>
-        <div class="cap">Bröllop · <a href="https://gallery.kim.ax/">gallery.kim.ax</a></div>
-      </div>
-      <div class="card">
-        <div class="ph" data-cap="Familj"></div>
-        <div class="cap">Familj & barn</div>
-      </div>
-      <div class="card">
-        <div class="ph" data-cap="Porträtt"></div>
-        <div class="cap">Porträtt</div>
-      </div>
-      <div class="card">
-        <div class="ph" data-cap="Kommersiellt"></div>
-        <div class="cap">Kommersiellt & företag</div>
-      </div>
-      <div class="card">
-        <div class="ph" data-cap="Landskap"></div>
-        <div class="cap">Skärgård & landskap</div>
-      </div>
-      <div class="card">
-        <div class="ph" data-cap="Evenemang"></div>
-        <div class="cap">Evenemang</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ GALLERY CTA ============ -->
-  <section class="gallery-cta">
-    <h2>Dina bilder väntar</h2>
-    <p>Alla mina kundgallerier ligger på Pixieset – ladda ner, dela och beställ dina foton här.</p>
-    <p style="margin-top:1.4rem"><a class="btn" href="https://gallery.kim.ax/">Öppna gallery.kim.ax</a></p>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section id="om" class="container">
-    <div class="about">
-      <div class="ph" data-cap="Porträtt av Kim"></div>
-      <div>
-        <h2>Hej, jag heter Kim</h2>
-        <p>Jag är fotograf baserad på Åland. Jag arbetar med allt från bröllop och familjeporträtt till kommersiella uppdrag – alltid med fokus på det naturliga ljuset och de ärliga ögonblicken.</p>
-        <p>Fotografering är för mig ett sätt att ge tid tyngd: att rädda en stund som aldrig kommer tillbaka och ge den vidare, år efter år.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section id="kontakt" class="container contact">
-    <h2>Kontakt & bokning</h2>
-    <p style="color:var(--muted)">Har du en fråga eller vill boka? Skriv till mig så återkommer jag så snart jag kan.</p>
-    <p style="margin-top:2.2rem"><a class="mail" href="mailto:hello@kim.ax">hello@kim.ax</a></p>
-    <div class="meta">
-      <div>Kim — fotograf · Mariehamn, Åland</div>
-      <div>Gallerier: <a href="https://gallery.kim.ax/">gallery.kim.ax</a></div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="brand-sm">Kim</div>
-  <nav>
-    <a href="#portfolio">Portfolio</a>
-    <a href="https://gallery.kim.ax/">Galleri</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
-  <p style="margin-top:1.5rem">© <span id="yr"></span> Kim · <a href="mailto:hello@kim.ax" style="color:var(--muted)">hello@kim.ax</a></p>
-</footer>
-
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <div class="wrap">
+    <div class="kicker">Kim Lindström Photography</div>
+    <h1>Något vackert<br>är <em>under uppbyggnad</em>.</h1>
+    <p>Min fotografisajt flyttar in här. Vill du komma i kontakt under tiden?</p>
+    <div class="bar"></div>
+    <p><a href="mailto:hello@kim.ax">hello@kim.ax</a></p>
+    <div class="footer">Åland · Fotografi · <span class="serif" style="font-size:.95rem">Kom snart tillbaka</span></div>
+  </div>
 </body>
 </html>
