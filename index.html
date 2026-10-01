@@ -1,24 +1,55 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kim Lindström — Photography · Åland</title>
-    <meta name="description" content="Kim Lindström — photographer based on the Åland islands. Weddings, families, portraits and commercial photography." />
-
-    <meta property="og:title" content="Kim Lindström — Photography" />
-    <meta property="og:description" content="Photographer based on the Åland islands. Weddings, families, portraits and commercial photography." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kim.ax" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Kim Lindström — Photography" />
-    <meta name="twitter:description" content="Photographer based on the Åland islands." />
-    <script type="module" crossorigin src="/assets/index-ryvQF1bK.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-C9fPMpQv.css">
-  </head>
-
-  <body>
-    <div id="root"></div>
-  </body>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kim Lindström Photography — under construction</title>
+  <meta name="description" content="Kim Lindström Photography på Åland. Sida under uppbyggnad. Kontakt: hello@kim.ax">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: Inter, sans-serif;
+      background: #141414; color: #faf9f7;
+      display: grid; place-items: center;
+      text-align: center; line-height: 1.6;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 34rem; }
+    .kicker { text-transform: uppercase; letter-spacing: .4em; font-size: .75rem; color: #8a8a8a; }
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 400; font-size: clamp(1.9rem, 5vw, 3rem);
+      margin: 1.4rem 0 1rem; line-height: 1.15;
+    }
+    h1 em { font-style: italic; color: #b08d57; }
+    p { color: #a9a9a9; font-size: 1.05rem; }
+    .bar {
+      width: 220px; height: 1px; background: #333; margin: 2.2rem auto;
+      position: relative; overflow: hidden;
+    }
+    .bar::after {
+      content: ""; position: absolute; inset: 0;
+      background: #b08d57; animation: slide 2.2s ease-in-out infinite;
+    }
+    @keyframes slide { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+    a { color: #d9cfc4; text-decoration: none; border-bottom: 1px solid #444; padding-bottom: .1rem; }
+    a:hover { color: #fff; border-color: #b08d57; }
+    .footer { margin-top: 2.4rem; font-size: .85rem; color: #6c6c6c; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kicker">Kim Lindström Photography</div>
+    <h1>Något vackert<br>är <em>under uppbyggnad</em>.</h1>
+    <p>Min fotografisajt flyttar in här. Vill du komma i kontakt under tiden?</p>
+    <div class="bar"></div>
+    <p><a href="mailto:hello@kim.ax">hello@kim.ax</a></p>
+    <div class="footer">Åland · Fotografi · <span style="font-family:'Playfair Display',serif;font-size:.95rem">Kom snart tillbaka</span></div>
+  </div>
+</body>
 </html>
